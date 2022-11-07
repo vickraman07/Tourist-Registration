@@ -1,0 +1,95 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form #addForm="ngForm" (ngSubmit)="registerNow()">
+                <fieldset>
+                    <legend class="text-center">TOURIST REGISTRATION FORM <span class="req"><small>
+                                required *</small></span></legend>
+
+                    <div class="form-group">
+                        <label for="Name"><span class="req">* </span> Name: <small></small> </label>
+                        <input required type="text" [(ngModel)]="user.name" name="name" id="name" required 
+                            class="form-control " maxlength="15" placeholder="Enter your fullname..." />
+                    </div>
+
+                    <div class="form-group">
+                       <!--<label for="gender"><span class="req">* </span> Gender </label>
+                        <select id="gender"[(ngModel)]="user.gender" [value]="user.gender" class="form-control" name="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="others">Others</option>
+                          </select>
+                        <div id="errFirst"></div> 
+                        -->
+                        <div class="form-group">
+                            <label for="Name"><span class="req">* </span> Last Name: <small></small> </label>
+                            <input required type="text" [(ngModel)]="user.lastName" name="name" id="name" required
+                                class="form-control " maxlength="12" placeholder="Enter your lastname..." />
+                        </div>
+                        <label for="Name"><span class="req">* </span> Gender: <small></small> </label><br>
+                        &nbsp;
+                        <label class>
+                            
+                            <input type="radio" name="options" id="option1" value="MALE" 
+                            [(ngModel)]="user.gender"> MALE
+                            </label>
+                            &nbsp;
+                            &nbsp;
+                            <label >
+                            <input type="radio" name="options" id="option2" value="FEMALE" 
+                            [(ngModel)]="user.gender"> FEMALE
+                            </label>
+                            &nbsp;
+                            &nbsp;
+                            <label >
+                            <input type="radio" name="options" id="option3" value="OTHERS" 
+                            [(ngModel)]="user.gender"> OTHERS
+                            </label>
+                            <div id="errLast"></div>
+                            </div>
+                          
+                    
+                    <div class="form-group">
+                        <label for="age"><span class="req">* </span> Age </label>
+                        <input class="form-control" required type="number" [(ngModel)]="user.age" name="mark" min="10" max="90"
+                            id="replyNumber" placeholder="Enter your age" maxlength="2" required data-bind="value:replyNumber"  />
+                        <div class="status" id="status"></div>
+                         
+                        <div id="errLast"></div>
+                       
+          
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fromplace"><span class="req">* </span> From place: </label>
+                        <input class="form-control" required type="text" [(ngModel)]="user.fromPlace" name="place"
+                            id="place" required placeholder="Enter your place" />
+                        <div class="status" id="status"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="fromplace"><span class="req">* </span> Number of Days </label>
+                        <input class="form-control phone" required type="number" [(ngModel)]="user.no_of_day_visit"  required name="Number"
+                            id="replynumber" placeholder="Number of days"  />
+                        <div class="status" id="status"></div>
+                        <div id="errLast"></div>
+                    </div>
+                    <div class="form-group">
+                        <!--<input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registerNow()"> -->
+                        <button [disabled]="addForm.invalid" type="submit" class="btn btn-success">REGISTER</button>
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+
+    </div>
+</div>
+<br>
+</body>
+
+

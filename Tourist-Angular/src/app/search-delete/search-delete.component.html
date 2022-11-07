@@ -1,0 +1,57 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+ <!-- <div class="container">
+    <div class="row">
+               <div id="custom-search-input">
+                <div class="input-group col-md-12" style="text-align: center">
+                  <input type="text" class="search-query form-control" placeholder="Search With Name"  name="Name" [(ngModel)]="users.name"/> 
+                  <span class="input-group-btn">
+                    <button class="btn btn-danger" type="button">
+                        <span class=" glyphicon glyphicon-search"></span>
+                    </button>
+                </span> 
+                                </div>
+                            </div>
+    </div>
+    </div> -->
+    
+    <h4 ><b>TOURISTS DATA</b></h4>     
+<div class="container">
+<div class="container">
+    <div class="row col-md-12 col-md-offset-2 custyle">
+    <table class="table table-striped custab">     
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Last Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>From place</th>
+            <th>Number of days</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.gender}}</td>
+            <td>{{user.age}}</td>
+            <td>{{user.fromPlace}}</td>
+            <td>{{user.no_of_day_visit}}</td>
+            <td class="text-center"><button class="btn btn-danger btn-xs" (click)="delteUser(user.id)"><span class="glyphicon glyphicon-trash"></span> Delete</button></td>
+          </tr>
+    </tbody>
+    </table>
+    <br>
+    <a routerLink="/search" class="btn btn-info" onClick="window.location.reload();" role="button">REFRESH</a>
+
+    </div>
+</div>
+</div>
+
