@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { UserRegistrationService } from '../user-registration.service';
 
 @Component({
-  selector: 'app-search-delete',
-  templateUrl: './search-delete.component.html',
-  styleUrls: ['./search-delete.component.css']
+  selector: 'app-view',
+  templateUrl: './view.component.html',
+  styleUrls: ['./view.component.css']
 })
-export class SearchDeleteComponent implements OnInit {
+export class ViewComponent implements OnInit {
   users:any;
   id:number | undefined;
 
@@ -23,5 +23,7 @@ export class SearchDeleteComponent implements OnInit {
     resp.subscribe((data)=>this.users=data);
   
   }
+
+
 
 }

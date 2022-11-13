@@ -20,7 +20,6 @@ public class TouristController {
     public Tourist addTourist(@RequestBody Tourist tourist) {
          return service.saveTourist(tourist);
 
-
     }
 
     @PostMapping("/addTourists")

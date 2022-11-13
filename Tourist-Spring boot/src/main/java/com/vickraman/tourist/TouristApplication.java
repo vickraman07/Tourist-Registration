@@ -9,7 +9,6 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 public class TouristApplication {
 	@LoadBalanced
 	public static void main(String[] args) {
-		
 		SpringApplication.run(TouristApplication.class, args);
 	}
 

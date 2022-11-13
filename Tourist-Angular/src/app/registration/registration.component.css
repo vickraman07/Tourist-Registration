@@ -1,6 +1,10 @@
-
+h4{
+    text-align: center;
+    color:#FF7F50;
+    text-indent: -600px;
+  }
 body {
-    padding-top:30px;
+    padding-top:20px;
 }
 fieldset {
     border: thin solid #ccc; 
@@ -9,15 +13,7 @@ fieldset {
     padding-left: 40px;
     background: #f0ffff;
 }
-legend {
-   color: dark;
-}
-.form-control {
-    width: 95%;
-}
-label small {
-    color: #678 !important;
-}
+
 span.req {
     color:red;
     font-size: 112%;

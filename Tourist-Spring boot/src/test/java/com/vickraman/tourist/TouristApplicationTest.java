@@ -24,14 +24,14 @@ class TouristApplicationTest {
     @Test
     public void checkInfo2(){
         Tourist tourist=TouristController.findTouristByName("KEERTHAN");
-        assertEquals(tourist.getAge(),15);
+        assertEquals(tourist.getAge(),14);
 
     }
 
     @Test
     public void checkInfo3(){
-        Tourist tourist=TouristController.findTouristById(4);
-        assertEquals(tourist.getGender(),"MALE");
+        Tourist tourist=TouristController.findTouristById(3);
+        assertEquals(tourist.getGender(),"FEMALE");
     }
 
     @Test
