@@ -3,7 +3,7 @@ package com.vickraman.tourist.controller;
 import com.vickraman.tourist.entity.Tourist;
 import com.vickraman.tourist.service.TouristService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
+//import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
